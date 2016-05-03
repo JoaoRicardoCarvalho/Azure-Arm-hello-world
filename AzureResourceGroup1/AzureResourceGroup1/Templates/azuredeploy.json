@@ -3,9 +3,45 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
     },
-    "variables": {
-    },
+  "variables": {
+    "VnetHWPrefix": "10.0.0.0/16",
+    "VnetHWSubnet1Name": "Subnet-HelloWorl 1",
+    "VnetHWSubnet1Prefix": "10.0.0.0/24",
+    "VnetHWSubnet2Name": "Subnet-HelloWorl 2",
+    "VnetHWSubnet2Prefix": "10.0.1.0/24"
+  },
     "resources": [
+        {
+            "name": "VnetHW",
+            "type": "Microsoft.Network/virtualNetworks",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [ ],
+            "tags": {
+                "displayName": "VnetHW"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('VnetHWPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('VnetHWSubnet1Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('VnetHWSubnet1Prefix')]"
+                        }
+                    },
+                    {
+                        "name": "[variables('VnetHWSubnet2Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('VnetHWSubnet2Prefix')]"
+                        }
+                    }
+                ]
+            }
+        }
     ],
     "outputs": {
     }
