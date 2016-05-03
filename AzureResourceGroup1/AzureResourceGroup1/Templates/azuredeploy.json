@@ -5,9 +5,9 @@
     },
   "variables": {
     "VnetHWPrefix": "10.0.0.0/16",
-    "VnetHWSubnet1Name": "Subnet-HelloWorl 1",
+    "VnetHWSubnet1Name": "Subnet-HelloWorld 1",
     "VnetHWSubnet1Prefix": "10.0.0.0/24",
-    "VnetHWSubnet2Name": "Subnet-HelloWorl 2",
+    "VnetHWSubnet2Name": "Subnet-HelloWorld 2",
     "VnetHWSubnet2Prefix": "10.0.1.0/24"
   },
     "resources": [
